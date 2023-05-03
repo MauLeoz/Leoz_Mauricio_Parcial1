@@ -47,8 +47,14 @@ public class Producto {
                 '}';
     }
 
-    public void aplicarDescuento(float porcentaje){
+    public double aplicarDescuento(float porcentaje){
         double v = getPrecio() - ((getPrecio() * porcentaje) / 100);
-        setPrecio(v);
+        return v;
     }
+
+    public void actualizarPrecio(float porcentaje){
+        double v = getPrecio() - ((getPrecio() * porcentaje) / 100);
+        this.setPrecio(v);
+    }
+
 }
