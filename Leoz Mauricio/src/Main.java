@@ -57,6 +57,8 @@ public class Main {
         //Se aplica un descuento especial segun la clase de cliente. La funcion esta desarrollada abajo
 
         descuentoSegunCategoria(listaProductos);
+        System.out.println();
+        System.out.println();
 
         //Updateo masivo de los precios segun los porcentajes indicados
 
@@ -65,11 +67,11 @@ public class Main {
                 System.out.println(p.getClass().getSimpleName()+" " +p.getNombre()+" precio original: $" + p.getPrecio());
 
 
-                if(p.getClass().getName()=="Silla"){
+                if(p.getClass().getSimpleName().equals("Silla")){
                     p.actualizarPrecio(5);
-                }else if(p.getClass().getSimpleName()=="Escritorio"){
+                }else if(p.getClass().getSimpleName().equals("Escritorio")){
                     p.actualizarPrecio(10);
-                }else if(p.getClass().getSimpleName()=="Impresora"){
+                }else if(p.getClass().getSimpleName().equals("Impresora")){
                     p.actualizarPrecio(15);
                 }else{
                     p.actualizarPrecio(20);
